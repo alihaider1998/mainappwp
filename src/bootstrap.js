@@ -9,7 +9,9 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter
+      basename={process.env.NODE_ENV === "production" ? "/mainappwp" : "/"}
+    >
       <App />
     </BrowserRouter>
   </React.StrictMode>
