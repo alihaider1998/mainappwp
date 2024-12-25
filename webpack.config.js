@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 module.exports = (env, argv) => {
+  const CopyWebpackPlugin = require("copy-webpack-plugin");
+
   const isProduction = argv.mode === "production";
   const PORT = 3000;
 
@@ -69,6 +71,9 @@ module.exports = (env, argv) => {
       }),
       new HtmlWebpackPlugin({
         template: "./public/index.html",
+      }),
+      new CopyWebpackPlugin({
+        patterns: [{ from: "public/404.html", to: "404.html" }],
       }),
     ],
     optimization: {
