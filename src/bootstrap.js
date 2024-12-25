@@ -1,4 +1,3 @@
-// src/bootstrap.js
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
@@ -9,9 +8,7 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter
-      basename={process.env.NODE_ENV === "production" ? "/mainappwp" : "/"}
-    >
+    <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/mainappwp' : '/'}>
       <App />
     </BrowserRouter>
   </React.StrictMode>
