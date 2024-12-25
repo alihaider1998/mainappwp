@@ -195,9 +195,8 @@ module.exports = (env, argv) => {
       }),
       new HtmlWebpackPlugin({
         template: "./public/index.html",
-        // Add base tag for GitHub Pages
         templateParameters: {
-          BASE_URL: isProduction ? `/${repoName}/` : "/",
+          BASE_URL: "/",
         },
       }),
     ],
