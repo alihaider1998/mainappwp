@@ -53,7 +53,7 @@ module.exports = (env, argv) => {
         filename: "remoteEntry.js",
         remotes: {
           app1: isProduction
-            ? `app1@https://alihaider1998.github.io/app1/remoteEntry.js` // Update this with your App1's GitHub Pages URL
+            ? "app1@https://alihaider1998.github.io/app1Wp/remoteEntry.js"
             : "app1@http://localhost:3001/remoteEntry.js",
         },
         exposes: {
