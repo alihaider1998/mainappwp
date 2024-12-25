@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      const segments = window.location.pathname.split("/");
+      const repo = segments[1];
+      const path = segments.slice(2).join("/");
+      sessionStorage.setItem("redirect", path);
+      window.location.href = "/" + repo;
+    </script>
+  </head>
+  <body></body>
+</html>

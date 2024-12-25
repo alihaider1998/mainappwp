@@ -12,9 +12,8 @@ module.exports = (env, argv) => {
     output: {
       filename: "[name].[contenthash].js",
       path: path.resolve(__dirname, "dist"),
-      publicPath: isProduction
-        ? "https://alihaider1998.github.io/mainappwp/"
-        : "http://localhost:3000/",
+      publicPath: isProduction ? "/mainappwp/" : "http://localhost:3000/",
+
       clean: true,
     },
     resolve: {
