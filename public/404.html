@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <title>Main App WP</title>
     <script>
-      const path = window.location.pathname;
-      const searchParams = window.location.search;
-      localStorage.setItem("redirect", path + searchParams);
-      window.location.replace("/mainappwp");
+      const pathSegments = window.location.pathname.split("/");
+      const repoName = pathSegments[1];
+      const path = pathSegments.slice(2).join("/");
+      sessionStorage.setItem("redirect", path);
+      window.location.href = "/" + repoName;
     </script>
   </head>
-  <body>
-    Redirecting...
-  </body>
+  <body></body>
 </html>
