@@ -74,7 +74,7 @@ const App = () => {
       </nav>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-7">
         <Suspense
           fallback={
             <div className="flex items-center justify-center h-64">
